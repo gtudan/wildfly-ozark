@@ -1,0 +1,11 @@
+<module xmlns="urn:jboss:module:1.3" name="org.mvc-spec.ozark.resteasy">
+    <resources>
+        <resource-root path="ozark-resteasy-1.0.0-m03-SNAPSHOT.jar"/>
+    </resources>
+
+    <dependencies>
+        <module name="javax.mvc.api"/>
+        <module name="org.mvc-spec.ozark.core"/>
+        <module name="org.jboss.resteasy.resteasy-jaxrs"/>
+    </dependencies>
+</module>

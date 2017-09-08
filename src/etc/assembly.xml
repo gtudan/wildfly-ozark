@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+    <id>distribution</id>
+    <baseDirectory>modules/system/add-ons/ozark</baseDirectory>
+    <includeBaseDirectory>true</includeBaseDirectory>
+        <formats>
+        <format>zip</format>
+        <format>tar.gz</format>
+    </formats>
+    <fileSets>
+        <fileSet>
+            <directory>src/etc/add-ons/ozark</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>*/**</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+        <dependencySet>
+            <includes>
+                <include>javax.mvc:javax.mvc-api</include>
+            </includes>
+            <outputDirectory>javax/mvc/api/main/</outputDirectory>
+        </dependencySet>
+        <dependencySet>
+            <includes>
+                <include>org.mvc-spec.ozark:ozark-core</include>
+            </includes>
+            <outputDirectory>org/mvc-spec/ozark/core/main/</outputDirectory>
+        </dependencySet>
+        <dependencySet>
+            <includes>
+                <include>org.mvc-spec.ozark:ozark-resteasy</include>
+            </includes>
+            <outputDirectory>org/mvc-spec/ozark/resteasy/main/</outputDirectory>
+        </dependencySet>
+    </dependencySets>
+</assembly>
