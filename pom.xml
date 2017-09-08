@@ -29,11 +29,11 @@
         <artifactId>jboss-as-parent</artifactId>
     </parent -->
 
-    <groupId>org.mvc-spec</groupId>
-    <artifactId>ozwark-wildfly</artifactId>
+    <groupId>org.mvc-spec.ozark</groupId>
+    <artifactId>ozark-wildfly</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>WildFly: Subsystem Artifact</name>
+    <name>WildFly: Ozark Subsystem</name>
 
     <packaging>jar</packaging>
 
@@ -55,9 +55,6 @@
 
 
     <build>
-        <!-- Maven will append the version to the finalName (which is the name
-           given to the generated war, and hence the context root) -->
-        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -89,6 +86,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
                         <id>build wildfly addon</id>
@@ -96,12 +94,14 @@
                         <goals>
                             <goal>single</goal>
                         </goals>
-                        <configuration>
-                            <descriptor>src/etc/assembly.xml</descriptor>
-                            <basedir>src/etc</basedir>
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/etc/assembly.xml</descriptor>
+                    </descriptors>
+                    <basedir>src/etc</basedir>
+                </configuration>
             </plugin>
 
         </plugins>

@@ -1,6 +1,6 @@
-    <module xmlns="urn:jboss:module:1.0" name="ozwark-wildfly">
+<module xmlns="urn:jboss:module:1.0" name="org.mvc-spec.ozark.wildfly">
     <resources>
-        <resource-root path="ozwark-wildfly.jar"/>
+        <resource-root path="ozark-wildfly-1.0-SNAPSHOT.jar"/>
     </resources>
     
     <dependencies>

@@ -4,6 +4,6 @@
     </resources>
 
     <dependencies>
-        <module name="javax.mvc.api"/>
+        <module name="javax.mvc.api" services="import"/>
     </dependencies>
 </module>

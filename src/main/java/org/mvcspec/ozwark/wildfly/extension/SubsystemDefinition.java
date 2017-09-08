@@ -21,7 +21,7 @@ public class SubsystemDefinition extends SimpleResourceDefinition {
     @Override
     public void registerOperations(ManagementResourceRegistration resourceRegistration) {
         super.registerOperations(resourceRegistration);
-        //you can register aditional operations here
+        //you can register additional operations here
     }
 
     @Override

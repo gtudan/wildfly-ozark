@@ -36,5 +36,11 @@
             </includes>
             <outputDirectory>org/mvc-spec/ozark/resteasy/main/</outputDirectory>
         </dependencySet>
+        <dependencySet>
+            <includes>
+                <include>org.mvc-spec.ozark:ozark-wildfly</include>
+            </includes>
+            <outputDirectory>org/mvc-spec/ozark/wildfly/main/</outputDirectory>
+        </dependencySet>
     </dependencySets>
 </assembly>

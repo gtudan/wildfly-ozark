@@ -34,14 +34,14 @@ import static org.jboss.as.controller.descriptions.ModelDescriptionConstants.SUB
 public class SubsystemExtension implements Extension {
 
     /**
-     * The name space used for the {@code substystem} element
+     * The name space used for the {@code subsystem} element
      */
-    public static final String NAMESPACE = "urn:mycompany:mysubsystem:1.0";
+    public static final String NAMESPACE = "urn:org.mvc-spec.ozark:mvc:1.0";
 
     /**
      * The name of our subsystem within the model.
      */
-    public static final String SUBSYSTEM_NAME = "mysubsystem";
+    public static final String SUBSYSTEM_NAME = "mvc";
 
     /**
      * The parser used for parsing our subsystem
