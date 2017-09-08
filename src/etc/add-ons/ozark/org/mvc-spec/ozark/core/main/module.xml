@@ -4,6 +4,11 @@
     </resources>
 
     <dependencies>
-        <module name="javax.mvc.api" services="import"/>
+        <module name="javax.mvc.api"/>
+        <module name="javax.servlet.api"/>
+        <module name="javax.ws.rs.api"/>
+        <module name="javax.enterprise.api"/>
+        <module name="javax.annotation.api"/>
+        <module name="javax.validation.api"/>
     </dependencies>
 </module>

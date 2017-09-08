@@ -20,7 +20,7 @@ public class SubsystemDeploymentProcessor implements DeploymentUnitProcessor {
 
     private static final ModuleIdentifier MVC_API = ModuleIdentifier.create("javax.mvc.api");
     private static final ModuleIdentifier OZARK = ModuleIdentifier.create("org.mvc-spec.ozark.core");
-    private static final ModuleIdentifier OZARK_RESTEASY = ModuleIdentifier.create("org.mvc-spec.ozark.core");
+    private static final ModuleIdentifier OZARK_RESTEASY = ModuleIdentifier.create("org.mvc-spec.ozark.resteasy");
 
     Logger log = Logger.getLogger(SubsystemDeploymentProcessor.class);
 
@@ -33,15 +33,15 @@ public class SubsystemDeploymentProcessor implements DeploymentUnitProcessor {
 
     @Override
     public void deploy(DeploymentPhaseContext phaseContext) throws DeploymentUnitProcessingException {
-        log.info("Deploy");
         final DeploymentUnit deploymentUnit = phaseContext.getDeploymentUnit();
+        log.debugf("Initializing Ozark for deployment {0}", deploymentUnit.getName());
 
         final ModuleSpecification moduleSpecification = deploymentUnit.getAttachment(Attachments.MODULE_SPECIFICATION);
         final ModuleLoader moduleLoader = Module.getBootModuleLoader();
 
-        moduleSpecification.addSystemDependency(new ModuleDependency(moduleLoader, MVC_API, false, false, false, false));
-        moduleSpecification.addSystemDependency(new ModuleDependency(moduleLoader, OZARK, false, true, false, false));
-        moduleSpecification.addSystemDependency(new ModuleDependency(moduleLoader, OZARK_RESTEASY, false, false, false, false));
+        moduleSpecification.addLocalDependency(new ModuleDependency(moduleLoader, MVC_API, false, false, false, false));
+        moduleSpecification.addLocalDependency(new ModuleDependency(moduleLoader, OZARK, false, true, true, false));
+        moduleSpecification.addLocalDependency(new ModuleDependency(moduleLoader, OZARK_RESTEASY, false, true, true, false));
     }
 
     @Override
