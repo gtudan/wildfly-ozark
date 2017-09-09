@@ -9,20 +9,13 @@ import org.jboss.modules.Module;
 import org.jboss.modules.ModuleIdentifier;
 import org.jboss.modules.ModuleLoader;
 
-/**
- * An example deployment unit processor that does nothing. To add more deployment
- * processors copy this class, and add to the {@link AbstractDeploymentChainStep}
- * {@link org.mvcspec.ozwark.wildfly.extension.SubsystemAdd#performBoottime(org.jboss.as.controller.OperationContext, org.jboss.dmr.ModelNode, org.jboss.dmr.ModelNode, org.jboss.as.controller.ServiceVerificationHandler, java.util.List)}
- *
- * @author <a href="kabir.khan@jboss.com">Kabir Khan</a>
- */
 public class SubsystemDeploymentProcessor implements DeploymentUnitProcessor {
 
     private static final ModuleIdentifier MVC_API = ModuleIdentifier.create("javax.mvc.api");
     private static final ModuleIdentifier OZARK = ModuleIdentifier.create("org.mvc-spec.ozark.core");
     private static final ModuleIdentifier OZARK_RESTEASY = ModuleIdentifier.create("org.mvc-spec.ozark.resteasy");
 
-    Logger log = Logger.getLogger(SubsystemDeploymentProcessor.class);
+    private final Logger log = Logger.getLogger(SubsystemDeploymentProcessor.class);
 
     /**
      * See {@link Phase} for a description of the different phases

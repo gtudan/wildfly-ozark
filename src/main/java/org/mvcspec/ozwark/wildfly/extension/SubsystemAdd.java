@@ -10,8 +10,6 @@ import org.mvcspec.ozwark.wildfly.deployment.SubsystemDeploymentProcessor;
 
 /**
  * Handler responsible for adding the subsystem resource to the model
- *
- * @author <a href="kabir.khan@jboss.com">Kabir Khan</a>
  */
 class SubsystemAdd extends AbstractBoottimeAddStepHandler {
 
@@ -20,13 +18,6 @@ class SubsystemAdd extends AbstractBoottimeAddStepHandler {
     private SubsystemAdd() {
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void populateModel(ModelNode operation, ModelNode model) throws OperationFailedException {
-
-    }
 
     /**
      * {@inheritDoc}
