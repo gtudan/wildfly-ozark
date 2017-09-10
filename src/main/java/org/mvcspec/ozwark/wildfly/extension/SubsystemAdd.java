@@ -18,16 +18,11 @@ class SubsystemAdd extends AbstractBoottimeAddStepHandler {
     private SubsystemAdd() {
     }
 
-
     /**
      * {@inheritDoc}
      */
     @Override
     public void performBoottime(OperationContext context, ModelNode operation, ModelNode model)   throws OperationFailedException {
-
-        //Add deployment processors here
-        //Remove this if you don't need to hook into the deployers, or you can add as many as you like
-        //see SubDeploymentProcessor for explanation of the phases
         context.addStep(new AbstractDeploymentChainStep() {
             public void execute(DeploymentProcessorTarget processorTarget) {
                 processorTarget.addDeploymentProcessor(SubsystemExtension.SUBSYSTEM_NAME,
@@ -39,6 +34,4 @@ class SubsystemAdd extends AbstractBoottimeAddStepHandler {
         }, OperationContext.Stage.RUNTIME);
 
     }
-
-
 }

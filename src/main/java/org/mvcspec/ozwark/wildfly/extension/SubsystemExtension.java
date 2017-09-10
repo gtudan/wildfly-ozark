@@ -27,21 +27,17 @@ import static org.jboss.as.controller.descriptions.ModelDescriptionConstants.OP;
 import static org.jboss.as.controller.descriptions.ModelDescriptionConstants.OP_ADDR;
 import static org.jboss.as.controller.descriptions.ModelDescriptionConstants.SUBSYSTEM;
 
-
-/**
- * @author <a href="kabir.khan@jboss.com">Kabir Khan</a>
- */
 public class SubsystemExtension implements Extension {
 
     /**
      * The name space used for the {@code subsystem} element
      */
-    public static final String NAMESPACE = "urn:org.mvc-spec.ozark:mvc:1.0";
+    static final String NAMESPACE = "urn:org.mvc-spec.ozark:mvc:1.0";
 
     /**
      * The name of our subsystem within the model.
      */
-    public static final String SUBSYSTEM_NAME = "mvc";
+    static final String SUBSYSTEM_NAME = "mvc";
 
     /**
      * The parser used for parsing our subsystem
@@ -88,8 +84,7 @@ public class SubsystemExtension implements Extension {
          */
         @Override
         public void writeContent(XMLExtendedStreamWriter writer, SubsystemMarshallingContext context) throws XMLStreamException {
-            context.startSubsystemElement(SubsystemExtension.NAMESPACE, false);
-            writer.writeEndElement();
+            context.startSubsystemElement(SubsystemExtension.NAMESPACE, true);
         }
 
         /**
