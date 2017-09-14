@@ -9,7 +9,7 @@ reference implementation "Ozark".
 
 ## Installing the Module
 
-Unpack the distribution to the root of your wildfly installation. This will create
+Unpack the distribution (you can find the latest binaries on the [release page](https://github.com/gtudan/wildfly-ozark/releases)) to the root of your wildfly installation. This will create
 a new folder `ozark` in `modules/system/addons/`.
 
 ## Activating the subsystem
