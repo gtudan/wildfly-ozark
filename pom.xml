@@ -39,7 +39,7 @@
 
     <properties>
         <version.wildfly>10.1.0.Final</version.wildfly>
-        <version.wildfly.core>2.2.0.Final</version.wildfly.core>
+        <version.wildfly.core>5.0.0.Final</version.wildfly.core>
         <version.ozark>1.0.0-m03-SNAPSHOT</version.ozark>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <module.name>ozwark-wildfly</module.name>
