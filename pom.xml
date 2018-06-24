@@ -34,13 +34,15 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>WildFly: Ozark Subsystem</name>
+    <description>A wildfly extension adding support for MVC-Spec</description>
 
     <packaging>jar</packaging>
 
     <properties>
-        <version.wildfly>10.1.0.Final</version.wildfly>
-        <version.wildfly.core>2.2.0.Final</version.wildfly.core>
-        <version.ozark>1.0.0-m03-SNAPSHOT</version.ozark>
+        <version.wildfly>12.0.0.Final</version.wildfly>
+        <version.wildfly.core>4.0.0.Final</version.wildfly.core>
+        <version.ozark>1.0.0-m03</version.ozark>
+        <version.mvc.api>1.0-pr</version.mvc.api>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <module.name>ozwark-wildfly</module.name>
     </properties>
@@ -55,7 +57,6 @@
 
 
     <build>
-
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -130,7 +131,7 @@
         <dependency>
             <groupId>javax.mvc</groupId>
             <artifactId>javax.mvc-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${version.mvc.api}</version>
         </dependency>
         <dependency>
             <groupId>org.mvc-spec.ozark</groupId>
