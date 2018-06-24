@@ -2,7 +2,7 @@
 
 # About this project
 
-This module adds support for the MVC 1.0 spec to wildfly 10.x by installing the 
+This module adds support for the MVC 1.0 spec to wildfly >= 10.x by installing the 
 reference implementation "Ozark".
 
 # Installation
@@ -49,7 +49,7 @@ All you need is the MVC-API. If you are using Maven, you can add it like this:
     <dependency>
         <groupId>javax.mvc</groupId>
         <artifactId>javax.mvc-api</artifactId>
-        <version>1.0-edr2</version>
+        <version>1.0-pr</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
