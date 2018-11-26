@@ -40,7 +40,7 @@
 
     <properties>
         <version.wildfly>12.0.0.Final</version.wildfly>
-        <version.wildfly.core>4.0.0.Final</version.wildfly.core>
+        <version.wildfly.core>6.0.0.Final</version.wildfly.core>
         <version.ozark>1.0.0-m03</version.ozark>
         <version.mvc.api>1.0-pr</version.mvc.api>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
